@@ -1,0 +1,34 @@
+{
+  "name": "safetynet-server",
+  "version": "1.0.0",
+  "description": "SafetyNet Server",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "author": "jrereyi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.2",
+    "chokidar": "^3.5.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "haversine-distance": "^1.2.1",
+    "mongodb": "^4.4.1",
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.0"
+  },
+  "nodemonConfig": {
+    "signal": "SIGTERM",
+    "watch": [
+      "api",
+      "lib",
+      "server.js"
+    ]
+  }
+}
