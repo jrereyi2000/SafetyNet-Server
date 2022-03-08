@@ -4,10 +4,12 @@ import path from "path";
 import 'dotenv/config'
 import initApi from "./api/index.js";
 import updater from "./lib/server/updater.js";
+import cors from 'cors';
 
 const PORT = process.env.PORT || 1930;
 
 const app = express();
+app.use(cors());
 const server = http.createServer(app);
 
 const dirname = process.cwd();
