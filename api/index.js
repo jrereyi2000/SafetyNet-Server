@@ -398,7 +398,7 @@ api.post("/addConnection", async (req, res) => {
     const users = await Users.find({_id: new ObjectId(userId)}).toArray();
     if (!users.length) return res.status(404).json({error: `No user with _id: ${userId} found.`});
 
-    const connections = await Users.find({name: connectionName, number: connectionNumber}).toArray();
+    const connections = await Users.find({number: connectionNumber}).toArray();
     if(!connections.length) return res.status(404).json({error: `No user with name: ${connectionName} and number: ${connectionNumber} found.`});
 
     let user = users[0]
